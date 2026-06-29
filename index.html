@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Modern CSS Sıfırlama ve Değişkenler */
+        /* Modern CSS Değişkenleri ve Temel Ayarlar */
         :root {
             --primary: #FF5A5F;
             --secondary: #FFB400;
@@ -33,7 +33,7 @@
             overflow-x: hidden;
         }
 
-        /* Navigasyon Alanı */
+        /* Navigasyon Barı */
         header {
             background-color: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -97,17 +97,6 @@
             position: relative;
         }
 
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 60px;
-            background: var(--light);
-            clip-path: topography;
-        }
-
         .hero-badge {
             background-color: rgba(255, 90, 95, 0.1);
             color: var(--primary);
@@ -156,7 +145,7 @@
             box-shadow: 0 12px 30px rgba(255, 90, 95, 0.4);
         }
 
-        /* Ürünler Alanı */
+        /* Ürünler Grid Yapısı */
         .section {
             max-width: 1200px;
             margin: 80px auto;
@@ -260,7 +249,7 @@
             font-weight: bold;
         }
 
-        /* Kurumsal Özellikler Bölümü */
+        /* Kurumsal Özellikler Paneli */
         .features-box {
             background-color: white;
             border-radius: 32px;
@@ -299,18 +288,18 @@
             color: #78909C;
         }
 
-        /* İletişim & Sipariş Alanı */
+        /* İletişim & Alt Bilgi */
         .contact-section {
             background: linear-gradient(135deg, var(--dark) 0%, #1A1926 100%);
             color: white;
-            padding: 8px 0;
+            padding: 20px 0 0 0;
             border-radius: 40px 40px 0 0;
             margin-top: 120px;
         }
 
         .contact-container {
             max-width: 800px;
-            margin: 80px auto;
+            margin: 80px auto 0 auto;
             text-align: center;
             padding: 0 20px;
         }
@@ -340,17 +329,17 @@
         }
 
         footer {
-            margin-top: 60px;
-            padding-top: 30px;
+            margin-top: 80px;
+            padding: 40px 0;
             border-top: 1px solid #37474F;
             font-size: 14px;
             color: #90A4AE;
         }
 
-        /* Mobil Uyumluluk (Responsive Media Queries) */
+        /* Mobil Cihaz Duyarlılığı */
         @media (max-width: 768px) {
             .nav-menu {
-                display: none; /* Basitlik adına mobilde menüyü gizleyip direkt odağı ürüne çekiyoruz */
+                display: none;
             }
             .hero h1 {
                 font-size: 32px;
@@ -365,6 +354,9 @@
             }
             .product-card {
                 margin-bottom: 40px;
+            }
+            .product-img-wrapper {
+                height: 320px;
             }
             .features-box {
                 padding: 20px;
@@ -381,7 +373,7 @@
 </head>
 <body>
 
-    <!-- Menü Çubuğu -->
+    <!-- Üst Menü -->
     <header>
         <div class="nav-container">
             <a href="#" class="logo">Mutlu<span>Atölyem</span></a>
@@ -393,56 +385,54 @@
         </div>
     </header>
 
-    <!-- Giriş (Hero) Alanı -->
+    <!-- Tanıtım (Hero) Bölümü -->
     <section class="hero">
-        <span class="hero-badge">✨ 1. Sınıf Taş Alçı Teknolojisi</span>
+        <span class="hero-badge">✨ Premium Sert Taş Alçı Teknolojisi</span>
         <h1>Hayal Gücünüzü Renklendirin, Mutluluğu Kendiniz Boyayın!</h1>
-        <p>Premium kalitede pürüzsüz taş alçı figürlerimiz, canlı boyalarımız ve fırçamızla tam set halinde kapınızda. Hem çocuklar hem yetişkinler için harika bir hobi deneyimi.</p>
+        <p>Premium kalitede pürüzsüz taş alçı figürlerimiz, canlı akrilik boyalarımız ve fırçamızla tam set halinde kapınızda. Hem çocuklar hem yetişkinler için eşsiz bir hobi deneyimi.</p>
         <a href="#urunler" class="btn btn-primary">Setleri İncele</a>
     </section>
 
-    <!-- Ürünler Alanı -->
+    <!-- Ürün Sergileme Alanı -->
     <section class="section" id="urunler">
         <div class="section-title">
             <h2>Özel Tasarım Boyama Setlerimiz</h2>
-            <p>Özenle hazırlanan ambalajlarında, yüksek detaylı taş alçı figürleri ve ihtiyacınız olan tüm malzemeler bir arada.</p>
+            <p>Özenle hazırlanan korumalı ambalajlarında, yüksek detaylı taş alçı figürleri ve ihtiyacınız olan tüm malzemeler bir arada.</p>
         </div>
 
         <div class="products-grid">
             
-            <!-- Ürün 1 -->
+            <!-- Ürün 1: Sevimli Karakterler -->
             <div class="product-card">
                 <div class="product-img-wrapper">
-                    <!-- Bana attığın ilk görsel -->
-                    <img src="1000051380.jpg" alt="Sevimli Canavarlar Taş Alçı Boyama Seti">
+                    <img src="622143370_1782761437013593.jpg" alt="Sevimli Karakterler Taş Alçı Boyama Seti">
                 </div>
                 <div class="product-info">
-                    <span class="product-tag">Hobi & Eğlence</span>
+                    <span class="product-tag">Hobi & Animasyon</span>
                     <h3>Sevimli Karakterler Seti</h3>
                     <ul class="product-features">
                         <li>2 Adet Yüksek Detaylı Taş Alçı Figür</li>
                         <li>6 Renk Canlı Akrilik Boya Seti</li>
                         <li>1 Adet Kaliteli Boyama Fırçası</li>
-                        <li>Özel Korumalı Vakumlu Ambalaj</li>
+                        <li>Özel Korumalı Vakumlu Güvenli Ambalaj</li>
                     </ul>
                     <a href="#iletisim" class="btn btn-primary" style="padding: 10px 24px; font-size: 14px; width: 100%; text-align: center;">Fiyat Al & Sipariş Ver</a>
                 </div>
             </div>
 
-            <!-- Ürün 2 -->
+            <!-- Ürün 2: Maşa ve Koca Ayı -->
             <div class="product-card">
                 <div class="product-img-wrapper">
-                    <!-- Bana attığın ikinci görsel -->
-                    <img src="1000051379.jpg" alt="Maşa ve Koca Ayı Taş Alçı Boyama Seti">
+                    <img src="356469654_1782761347628037.jpg" alt="Maşa ve Koca Ayı Taş Alçı Boyama Seti">
                 </div>
                 <div class="product-info">
                     <span class="product-tag">Çizgi Film Serisi</span>
                     <h3>Maşa ve Koca Ayı Seti</h3>
                     <ul class="product-features">
-                        <li>Premium Sınıf Pürüzsüz Taş Alçı</li>
-                        <li>Kapatıcılığı Yüksek Canlı Boyalar</li>
-                        <li>Ergonomik Kolay Kavranan Fırça</li>
-                        <li>Gelişimi Destekleyen Eğitici Set</li>
+                        <li>Premium Sınıf Pürüzsüz Taş Alçı Kalitesi</li>
+                        <li>Kapatıcılığı Yüksek 6'lı Canlı Boya Seti</li>
+                        <li>Ergonomik Kolay Kavranan Fırça Hediyeli</li>
+                        <li>Gelişimi Destekleyen Eğitici ve Eğlenceli Yapı</li>
                     </ul>
                     <a href="#iletisim" class="btn btn-primary" style="padding: 10px 24px; font-size: 14px; width: 100%; text-align: center;">Fiyat Al & Sipariş Ver</a>
                 </div>
@@ -450,36 +440,37 @@
 
         </div>
 
-        <!-- Kurumsal Özellikler Tablosu -->
+        <!-- Öne Çıkan Kurumsal Özellikler -->
         <div class="features-box" id="kurumsal">
             <div class="features-table">
                 <div class="feature-col">
                     <span class="feature-icon">💎</span>
                     <h4>Yüksek Dayanım</h4>
-                    <p>Sıradan inşaat alçıları gibi ufalanmaz, kırılmaya karşı ekstra dirençli taş alçı kalitesi.</p>
+                    <p>Sıradan alçılar gibi ufalanmaz, pürüzsüz mermer dokusuyla kırılmaya karşı ekstra dirençlidir.</p>
                 </div>
                 <div class="feature-col">
                     <span class="feature-icon">🎨</span>
                     <h4>Maksimum Detay</h4>
-                    <p>Pürüzsüz yüzey yapısı sayesinde boyayı mükemmel tutar ve detayları net gösterir.</p>
+                    <p>Yüksek hassasiyetli kalıplama sayesinde figürün en ufak detayları bile net ve kusursuzdur.</p>
                 </div>
                 <div class="feature-col">
                     <span class="feature-icon">🌿</span>
-                    <h4>Güvenli Malzeme</h4>
-                    <p>Çocuk sağlığına ve çevreye duyarlı, kokusuz ve zararsız hammaddelerle üretim.</p>
+                    <h4>Güvenli ve Doğal</h4>
+                    <p>Çocuk sağlığına tamamen uyumlu, kokusuz ve zararsız hammaddelerle titiz üretim.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- İletişim / Sipariş Bölümü -->
+    <!-- İletişim ve Kapanış -->
     <section class="contact-section" id="iletisim">
         <div class="contact-container">
             <h2>Toptan veya Perakende Sipariş</h2>
-            <p>Okullar, atölyeler, doğum günleri veya bireysel hobileriniz için toplu sipariş imkanı. Fiyat listesi ve detaylar için hemen bizimle iletişime geçin.</p>
-            <!-- Buradaki telefon numarasını kendi numaranızla değiştirebilirsiniz -->
-            <a href="https://wa.me/905000000000?text=Merhaba,%20Mutlu%20Atölyem%20boyama%20setleri%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="btn whatsapp-btn">
-                💬 WhatsApp ile Sipariş Ver
+            <p>Okullar, kreşler, doğum günü etkinlikleri veya bireysel hobileriniz için toplu sipariş avantajı. Güncel fiyat listesi ve detaylar için bize ulaşın.</p>
+            
+            <!-- WhatsApp Bağlantısı (Numarayı ihtiyacınıza göre güncelleyebilirsiniz) -->
+            <a href="https://wa.me/905000000000?text=Merhaba,%20Mutlu%20Atölyem%20boyama%20setleri%20hakkında%20bilgi%20almak%20ve%20sipariş%20vermek%20istiyorum." target="_blank" class="btn whatsapp-btn">
+                💬 WhatsApp ile Hızlı Sipariş
             </a>
 
             <footer>
